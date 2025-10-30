@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Lab3.css">
+        <script>
+          let curentoperand = "";
+          let previousoperand = "";
+          let operation = "";
+          function AppendNumber(num)
+          {
+            curentoperand = curentoperand+""+num
+            document.getElementById("screen").value = previousoperand + operation + curentoperand;
+            console.log(curentoperand);
+          }
+            function AC()
+            {
+                curentoperand = "";
+                previousoperand = "";
+                operation = "";
+                document.getElementById("screen").value = curentoperand;
+                console.log(curentoperand);
+            }
+
+        function ChooseOperation(op)
+        {
+            if (curentoperand === "") return;
+            previousoperand = curentoperand;
+            curentoperand = "";
+            operation = op;
+            document.getElementById("screen").value = previousoperand + op;
+           console.log("Operation chosen:", previousoperand, op);
+        }
+        function Compute()
+        {
+            let result;
+            const prev = parseFloat(previousoperand);
+            const current = parseFloat(curentoperand);
+            switch (operation)
+            {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            curentoperand = result;
+            operation = "";
+            previousoperand = "";
+            document.getElementById("screen").value = curentoperand;
+            console.log("Computation result:", curentoperand);
+        }   
+
+        </script>
+
+    </head>
+    <body>
+        <div>
+        <h1 id="Heading"> iOS Calculator </h1>
+        <input type="text" id="screen" value="" disabled>
+        <br>
+        <button onclick="AC()"> AC </button>
+        <button class="x"> +/-</button>
+        <button class="x"> % </button>
+        <button onclick="ChooseOperation('/')"> / </button>
+        <br>
+        <button onclick="AppendNumber(7)"> 7 </button>
+        <button onclick="AppendNumber(8)"> 8 </button>   
+        <button onclick="AppendNumber(9)"> 9 </button>
+        <button onclick="ChooseOperation('*')"> x </button>
+        <br>
+    
+        <button onclick="AppendNumber(4)"> 4 </button>
+        <button onclick="AppendNumber(5)"> 5 </button>
+        <button onclick="AppendNumber(6)"> 6 </button>
+        <button onclick="ChooseOperation('-')"> - </button>
+        <br>
+        
+        <button onclick="AppendNumber(1)"> 1</button>
+        <button onclick="AppendNumber(2)">2 </button>
+        <button onclick="AppendNumber(3)"> 3</button>
+        <button onclick="ChooseOperation('+')"> + </button>
+        <br>
+        
+        <button onclick="AppendNumber(0)"> 0 </button>
+        <button > . </button>
+        <button onclick="Compute()"> = </button>
+        </div>
+
+    </body>
+
+</html>
