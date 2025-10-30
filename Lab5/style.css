@@ -1,0 +1,97 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  background-color: #3f51b5;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.inputArea {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.inputArea input,
+.inputArea textarea,
+.inputArea select {
+  display: block;
+  width: 100%;
+  margin: 8px 0 15px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.inputArea input:focus,
+.inputArea textarea:focus,
+.inputArea select:focus {
+  border-color: #3f51b5;
+}
+
+.inputArea button {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputArea button:hover {
+  background-color: #2c3e9f;
+}
+
+.moieItem {
+  background: white;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.moieItem h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.moieItem p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.moieItem button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.moieItem button:hover {
+  background-color: #c0392b;
+}
