@@ -1,0 +1,64 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.page {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+}
+.about_me {
+     text-align: center;
+    background: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.projects {
+     text-align: center;
+    display: flex;
+   justify-content: space-around;
+}
+.projects div {
+    background: #ffffff;
+    padding: 15px;
+    width: 30% ;
+}
+.contact {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    text-align: center;
+}
+.contact input,
+.contact textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+.contact button {
+    padding: 12px 20px;
+    background: #4a7896;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+p
+{
+     text-align: center;
+}
