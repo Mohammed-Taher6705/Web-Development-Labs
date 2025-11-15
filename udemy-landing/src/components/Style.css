@@ -1,0 +1,90 @@
+:root {
+  --udemy-accent: oklch(0.4841 0.2342 293.93);
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  gap: 20px;
+  background: white;
+}
+
+/* Logo */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+/* Search bar */
+.navbar-search {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+}
+
+.navbar-links a:hover {
+  color: var(--udemy-accent);
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background: #f0f0f0;
+}
+
+.signup-btn {
+  background: var(--udemy-accent);
+  border-color: var(--udemy-accent);
+  color: white;
+}
+
+.signup-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Icons */
+.icon-cart,
+.icon-lang {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.icon-cart:hover,
+.icon-lang:hover {
+  color: var(--udemy-accent);
+}
