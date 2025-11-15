@@ -13,7 +13,9 @@ export default function Navbar() {
           className="navbar-logo"
         />
       </div>
-
+       <div className="navbar-Explore">
+      <h6>Explore</h6>
+       </div>
       {/* Search input */}
       <div className="navbar-search">
         <input

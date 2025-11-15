@@ -1,16 +1,41 @@
-import { heroData } from "../data";
+// Hero.js
+import { useState } from "react";
+import { heroData, heroImages } from "../data";
+import "./Style.css";
 
 export default function Hero() {
-  return (
-    <section className="hero">
-      <h2>{heroData.title}</h2>
-      <p>{heroData.subtitle}</p>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-      <div className="categories">
-        {heroData.categories.map((cat, i) => (
-          <span key={i} className="category-pill">{cat}</span>
-        ))}
+  const nextImage = () => {
+    setCurrentIndex((currentIndex + 1) % heroImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex(currentIndex === 0 ? heroImages.length - 1 : currentIndex - 1);
+  };
+
+  return (
+    <section
+      className="hero"
+      style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}
+    >
+      {/* Left Arrow */}
+      <button className="arrow arrow-left" onClick={prevImage}>
+        ◀
+      </button>
+
+      <div className="hero-content">
+        <h2>{heroData[currentIndex].title}</h2>
+        <p>{heroData[currentIndex].subtitle}</p>
+        {heroData[currentIndex].showButton && (
+          <button className="hero-button">{heroData[currentIndex].buttonText}</button>
+        )}
       </div>
+
+      {/* Right Arrow */}
+      <button className="arrow arrow-right" onClick={nextImage}>
+        ▶
+      </button>
     </section>
   );
 }
