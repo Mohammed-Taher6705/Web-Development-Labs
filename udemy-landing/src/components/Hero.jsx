@@ -1,4 +1,4 @@
-// Hero.js
+
 import { useState } from "react";
 import { heroData, heroImages } from "../data";
 import "./Style.css";
@@ -15,14 +15,9 @@ export default function Hero() {
   };
 
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}
-    >
-      {/* Left Arrow */}
-      <button className="arrow arrow-left" onClick={prevImage}>
-        ◀
-      </button>
+    <section className="hero" style={{ backgroundImage: `url(${heroImages[currentIndex]})` }}>
+      
+      <button className="arrow arrow-left" onClick={prevImage}> ◀ </button>
 
       <div className="hero-content">
         <h2>{heroData[currentIndex].title}</h2>
@@ -32,10 +27,7 @@ export default function Hero() {
         )}
       </div>
 
-      {/* Right Arrow */}
-      <button className="arrow arrow-right" onClick={nextImage}>
-        ▶
-      </button>
+      <button className="arrow arrow-right" onClick={nextImage}> ▶ </button>
     </section>
   );
 }
